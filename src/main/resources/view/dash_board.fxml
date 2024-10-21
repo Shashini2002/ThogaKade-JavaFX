@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardController">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="200.0" layoutY="147.0" onAction="#btnCustomerFormOnAction" prefHeight="41.0" prefWidth="193.0" style="-fx-background-color: #3498db;" text="Customer Form">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="200.0" layoutY="223.0" onAction="#btnItemFormOnAction" prefHeight="41.0" prefWidth="193.0" style="-fx-background-color: #3498db;" text="Item Form">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="200.0" layoutY="304.0" onAction="#btnPlaceOrderOnAction" prefHeight="41.0" prefWidth="193.0" style="-fx-background-color: #3498db;" text="Place Order Form">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#143e65" height="90.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <Label layoutX="211.0" layoutY="22.0" text="Thoga Kade" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>

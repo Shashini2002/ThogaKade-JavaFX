@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="593.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.customer.CustomerFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#073c6e" height="70.0" stroke="BLACK" strokeType="INSIDE" width="886.0" />
+      <Label layoutX="336.0" layoutY="10.0" prefHeight="50.0" prefWidth="249.0" text="Customer Form" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerID" layoutX="52.0" layoutY="93.0" promptText="Customer ID" />
+      <JFXTextField fx:id="txtCustomerName" layoutX="393.0" layoutY="93.0" prefHeight="25.0" prefWidth="135.0" promptText="Customer Name" />
+      <TableView fx:id="tblCustomers" layoutX="26.0" layoutY="284.0" prefHeight="236.0" prefWidth="834.0" stylesheets="@../css/styles.css">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="61.0" text="ID" />
+          <TableColumn fx:id="colTitle" prefWidth="56.0" text="Title" />
+            <TableColumn fx:id="colName" prefWidth="108.0" text="Name" />
+            <TableColumn fx:id="colSalary" prefWidth="85.0" text="Salary" />
+            <TableColumn fx:id="colDOB" prefWidth="102.0" text="DOB" />
+            <TableColumn fx:id="colAddress" prefWidth="129.0" text="Address" />
+            <TableColumn fx:id="colCity" prefWidth="94.0" text="City" />
+            <TableColumn fx:id="colProvince" prefWidth="98.0" text="Province" />
+            <TableColumn fx:id="colPostalCode" prefWidth="100.0" text="Postal Code" />
+        </columns>
+      </TableView>
+      <JFXComboBox fx:id="cmbTitle" layoutX="224.0" layoutY="93.0" prefHeight="26.0" prefWidth="135.0" promptText="Title" />
+      <JFXTextField fx:id="txtPostalCode" layoutX="560.0" layoutY="174.0" promptText="Postal Code" />
+      <JFXTextField fx:id="txtSalary" layoutX="560.0" layoutY="93.0" promptText="Salary" />
+      <JFXTextField fx:id="txtAddress" layoutX="52.0" layoutY="174.0" promptText="Address" />
+      <JFXTextField fx:id="txtCity" layoutX="224.0" layoutY="174.0" promptText="City" />
+      <DatePicker fx:id="dateDOB" layoutX="728.0" layoutY="93.0" prefHeight="26.0" prefWidth="135.0" promptText="Date Of Birth" />
+      <JFXButton buttonType="RAISED" layoutX="748.0" layoutY="136.0" onAction="#btnAddOnAction" prefHeight="26.0" prefWidth="95.0" style="-fx-background-color: #27ae60;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="748.0" layoutY="174.0" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #3498db;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="748.0" layoutY="208.0" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #e74c3c;" text="Delete " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="748.0" layoutY="243.0" onAction="#btnSearchOnAction" prefHeight="26.0" prefWidth="95.0" style="-fx-background-color: #f1c40f;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnReload" buttonType="RAISED" layoutX="425.0" layoutY="534.0" onAction="#btnReloadOnAction" prefHeight="26.0" prefWidth="69.0" style="-fx-background-color: #1abc9c;" text="Reload" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtProvince" layoutX="393.0" layoutY="174.0" prefHeight="25.0" prefWidth="135.0" promptText="Province" />
+
+   </children>
+</AnchorPane>

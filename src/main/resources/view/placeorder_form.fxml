@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="632.0" prefWidth="854.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.order.PlaceOrderFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#073c6e" height="72.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="854.0" />
+      <Label layoutX="301.0" layoutY="7.0" prefHeight="34.0" prefWidth="312.0" text="Place Order Form" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderDate" layoutX="295.0" layoutY="83.0" prefHeight="50.0" prefWidth="295.0" text=" Order Date : 2024-05-30 " textFill="#ab1f1f">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="658.0" layoutY="93.0" text="Time : 15:28:40 ">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtOrderID" layoutX="64.0" layoutY="95.0" promptText="Order ID" />
+      <JFXTextField fx:id="txtName" layoutX="259.0" layoutY="152.0" promptText="Name" />
+      <JFXTextField fx:id="txtCity" layoutX="464.0" layoutY="152.0" promptText="City" />
+      <JFXTextField fx:id="txtSalary" layoutX="672.0" layoutY="152.0" promptText="Salary" />
+      <JFXTextField fx:id="txtItemDescription" layoutX="259.0" layoutY="208.0" promptText="Item Description" />
+      <JFXTextField fx:id="txtUnitPrice" layoutX="464.0" layoutY="208.0" promptText="Unit Price " />
+      <JFXTextField fx:id="txtStock" layoutX="672.0" layoutY="208.0" promptText="Stock" />
+      <JFXTextField fx:id="txtQTY" layoutX="464.0" layoutY="264.0" promptText="Qty" />
+      <JFXComboBox fx:id="cmbCustomerId" layoutX="64.0" layoutY="152.0" prefHeight="25.0" prefWidth="135.0" promptText="Customer ID" />
+      <JFXComboBox fx:id="cmbItemCode" layoutX="64.0" layoutY="208.0" prefHeight="25.0" prefWidth="135.0" promptText="Item Code" />
+      <JFXButton buttonType="RAISED" layoutX="672.0" layoutY="262.0" onAction="#btnAddToCartOnAction" style="-fx-background-color: #0984e3;" text="Add to cart" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblOrders" layoutX="78.0" layoutY="328.0" prefHeight="222.0" prefWidth="700.0">
+        <columns>
+          <TableColumn fx:id="colItemCode" prefWidth="118.39999389648438" text="Item Code" />
+          <TableColumn fx:id="colDescription" prefWidth="214.39999389648438" text="Description" />
+            <TableColumn fx:id="colQTY" prefWidth="103.199951171875" text="Qty" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="128.00006103515625" text="Unit Price " />
+            <TableColumn fx:id="colTotal" prefWidth="136.79998779296875" text="Total" />
+        </columns>
+      </TableView>
+      <Label fx:id="lblNetTotal" layoutX="54.0" layoutY="570.0" prefHeight="36.0" prefWidth="198.0" text="Net Total : 0.0" textFill="#dc1111">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="675.0" layoutY="567.0" onAction="#btnPlaceOrderOnAction" prefHeight="42.0" prefWidth="115.0" style="-fx-background-color: #2ecc71;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

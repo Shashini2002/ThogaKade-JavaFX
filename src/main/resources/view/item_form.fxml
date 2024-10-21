@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="546.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.item.ItemFormController">
+   <children>
+      <JFXTextField fx:id="txtItemCode" layoutX="41.0" layoutY="103.0" promptText="Item Code" />
+      <JFXTextField fx:id="txtDescription" layoutX="233.0" layoutY="103.0" promptText="Description" />
+      <JFXTextField fx:id="txtQty" layoutX="234.0" layoutY="165.0" promptText="Qty" />
+      <JFXTextField fx:id="txtPrice" layoutX="41.0" layoutY="165.0" promptText="Price" />
+      <JFXTextField fx:id="txtPackSize" layoutX="407.0" layoutY="103.0" promptText="Pack Size" />
+      <JFXButton buttonType="RAISED" layoutX="413.0" layoutY="151.0" onAction="#btnAddOnAction" prefHeight="26.0" prefWidth="62.0" style="-fx-background-color: #27ae60;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="413.0" layoutY="191.0" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="62.0" style="-fx-background-color: #3498db;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="506.0" layoutY="191.0" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="62.0" style="-fx-background-color: #e74c3c;" text="Delete " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="506.0" layoutY="151.0" onAction="#btnSearchOnAction" prefHeight="26.0" prefWidth="62.0" style="-fx-background-color: #f1c40f;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblItem" layoutX="41.0" layoutY="254.0" prefHeight="222.0" prefWidth="520.0" stylesheets="@../css/styles.css">
+         <columns>
+            <TableColumn fx:id="colItemCode" prefWidth="72.0" text="Item Code" />
+            <TableColumn fx:id="colDescription" prefWidth="173.0" text="Description" />
+            <TableColumn fx:id="colPackSize" minWidth="0.0" prefWidth="90.0" text="Pack Size" />
+            <TableColumn fx:id="colPrice" prefWidth="95.0" text="Unit Price" />
+            <TableColumn fx:id="colQty" prefWidth="89.0" text="Qty On Hand" />
+         </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#143e65" height="73.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <Label layoutX="228.0" layoutY="14.0" text="Item Form" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="271.0" layoutY="498.0" onAction="#btnReloadOnAction" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: #1abc9c;" text="Reload" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
